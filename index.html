@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda Rental Mobil</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      margin-bottom: 10px;
+      background: linear-gradient(135deg, #07e05a, #16e283);
+      top: 0;
+      left: 0;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 70px;
+      background: url('header-bg.jpg') no-repeat center center/cover;
+      color: rgb(239, 243, 241);
+      padding:10px;
+    }
+
+    .cta-btn {
+      background-color: #ff5722;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .produk {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .produk h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .produk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .produk-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-top: 20px;
+    }
+
+    .produk-item:hover {
+      transform: translateY(-30px);
+    }
+
+    .produk-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .produk-item h3 {
+      font-size: 1.2rem;
+      margin: 15px 0 10px;
+    }
+
+    .produk-item p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .produk-item button {
+      background-color: #00ff80;
+      border-radius: 30px;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background-color 0.3s;
+    }
+
+    .produk-item button:hover {
+      background-color: #0056b3;
+    }
+
+   
+    .navbar {
+      padding: 10px 0;
+    }
+
+    .navbar .container-fluid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar-nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: none;
+    }
+
+    footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+    footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+
+.slide-in-bottom {
+  animation: slideInBottom 1s ease-in-out;
+}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Logo di sebelah kiri -->
+      <a class="navbar-brand" href="#" style="display: flex; align-items: center; gap: 8px;">
+        <img src="p-removebg-preview.png" alt="" style="width: 70px; height: 70px;">
+        <p style="margin-top: 15px;">IWAN CASUAL</p>
+      </a>
+
+      <!-- Tombol toggle untuk responsif -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu di sebelah kan -->
+      <nav class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="transaksi.html"> 
+            <i class="fas fa-shopping-cart"></i></a> 
+          <li class="nav-item"><a class="nav-link" href="profil.html">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="header fade-in">
+    <h1>Selamat Datang di IWAN CASUAL</h1>
+    <p>Temukan koleksi terbaru kami.</p>
+  </div>
+
+  <!-- Koleksi Produk -->
+  <section id="produk" class="produk animate-on-scroll">
+    <h2>Koleksi Terbaru</h2>
+    <div class="produk-grid">
+      <div class="produk-item">
+        <img src="https://down-id.img.susercontent.com/file/1ff0d4deaf918c861e8c0c7f21c2ae90" alt="Sepatu 14">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 699.000</p>
+        <button class=tambah-keranjang data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://down-id.img.susercontent.com/file/1ff0d4deaf918c861e8c0c7f21c2ae90" >Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://down-id.img.susercontent.com/file/7986b5e3209b371855a530b45abc313a" alt="Sepatu 13">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://down-id.img.susercontent.com/file/7986b5e3209b371855a530b45abc313a">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://down-id.img.susercontent.com/file/16210c7215c5305a35789a4eb5074886" alt="Sepatu 12">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://down-id.img.susercontent.com/file/16210c7215c5305a35789a4eb5074886">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBu7uiZSOvtG8R9amYnpW6JkrYmiCCI9oGtQ&s" alt="Sepatu 2">
+        <h3>Sepatu Wanita Sport</h3>
+        <p>Rp 349.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBu7uiZSOvtG8R9amYnpW6JkrYmiCCI9oGtQ&s">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpSo_S_8WgUwE3Ob9E2hfbljqNxxA0gaobQQ&s" alt="Sepatu 3">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBu7uiZSOvtG8R9amYnpW6JkrYmiCCI9oGtQ&s">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwdUOTbUN31sTwzEuBeFl6vUgJ7vAU6_4DIg&s" alt="Sepatu 4">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4VPlkzYn6Pa2hAzfE_I5OvtQbrzfMitElg&s">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4VPlkzYn6Pa2hAzfE_I5OvtQbrzfMitElg&s" alt="Sepatu 5">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa4VPlkzYn6Pa2hAzfE_I5OvtQbrzfMitElg&s">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://i.pinimg.com/474x/e6/0e/61/e60e618b7b98489700f2836cd567340b--adidas-design-casual-sneakers.jpg" alt="Sepatu 6">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://i.pinimg.com/474x/e6/0e/61/e60e618b7b98489700f2836cd567340b--adidas-design-casual-sneakers.jpg">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7qul2-lkdn9zydnbya6b" alt="Sepatu 7">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://down-id.img.susercontent.com/file/id-11134207-7qul2-lkdn9zydnbya6b">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://img.lazcdn.com/g/ff/kf/S67bb8c29100c4c54a1196c1c156faa14H.jpg_360x360q80.jpg_.webp" alt="Sepatu 8">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://img.lazcdn.com/g/ff/kf/S67bb8c29100c4c54a1196c1c156faa14H.jpg_360x360q80.jpg_.webp">Tambah ke Keranjang</button>
+      </div>
+      <div class="produk-item">
+        <img src="https://down-id.img.susercontent.com/file/id-11134207-7r991-lzdjxgj8etc860" alt="Sepatu 9">
+        <h3>Sepatu Sneakers Unisex</h3>
+        <p>Rp 399.000</p>
+        <button class=tambah-keranjang  data-nama="Sepatu Wanita Sport" data-harga="349000" data-gambar="https://down-id.img.susercontent.com/file/id-11134207-7r991-lzdjxgj8etc860">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </section>
+<footer>
+  <div class="footer-links">
+    <a href="#tentang-kami">Tentang Kami</a>
+    <a href="#kebijakan-privasi">Kebijakan Privasi</a>
+    <a href="#syarat-ketentuan">Syarat & Ketentuan</a>
+  </div>
+</footer>
+<footer class="slide-in-bottom">
+  <p>&copy; 2023 IWAN CASUAL. All rights reserved.</p>
+</footer>
+
+  <script>
+    // Fungsi untuk menambahkan barang ke keranjang 
+    const tambahKeranjangButtons = document.querySelectorAll('.tambah-keranjang');
+    tambahKeranjangButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const nama = button.getAttribute('data-nama');
+        const harga = button.getAttribute('data-harga');
+        const gambar = button.getAttribute('data-gambar');
+
+        // Ambil data keranjang dari localStorage
+        let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+
+        // Tambahkan barang baru ke keranjang
+        keranjang.push({ nama, harga, gambar });
+
+        // Simpan kembali ke localStorage
+        localStorage.setItem('keranjang', JSON.stringify(keranjang));
+
+        alert(`${nama} telah ditambahkan ke keranjang!`);
+        
+       window.location.href = 'transaksi.html';
+
+      });
+    });
+
+    // Fungsi untuk mengecek apakah elemen terlihat di layar
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Fungsi untuk menambahkan class animasi saat elemen terlihat
+  function animateOnScroll() {
+    const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-bottom');
+    elements.forEach((element) => {
+      if (isElementInViewport(element)) {
+        element.classList.add('animate');
+      }
+    });
+  }
+
+  // Jalankan fungsi saat halaman di-scroll
+  window.addEventListener('scroll', animateOnScroll);
+
+  // Jalankan fungsi saat halaman dimuat
+  window.addEventListener('load', animateOnScroll);
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
