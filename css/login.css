@@ -13,6 +13,11 @@
       padding: 20px; /* Memberikan jarak di sisi kiri dan kanan */
     }
 
+    h2{
+        font-weight:Bold;
+        
+    }
+
     .login-container {
       background-color: #fff;
       padding: 40px;
